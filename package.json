@@ -3,7 +3,9 @@
 	"version": "0.0.1",
 	"description": "A simple, real-time, MERN chat application",
 	"main": "./server/index.ts",
-	"scripts": {},
+	"scripts": {
+		"dev": "MODE=dev ts-node-dev ./server/index.ts"
+	},
 	"keywords": [
 		"node",
 		"express",
@@ -17,11 +19,11 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": ""
+		"url": "https://github.com/Aakash1103Jha/mern-chat-app.git"
 	},
 	"bugs": {
 		"email": "thedevdesigner@gmail.com",
-		"url": ""
+		"url": "https://github.com/Aakash1103Jha/mern-chat-app.git/issues"
 	},
 	"engines": {
 		"node": "17.x"
