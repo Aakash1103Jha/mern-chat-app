@@ -2,6 +2,8 @@ import express, { Application, Request, Response } from "express"
 import cors from "cors"
 import { resolve } from "path"
 
+import authRoute from "../routes/auth-route"
+
 const app: Application = express()
 const MODE = process.env.MODE
 
@@ -13,6 +15,9 @@ if (MODE === "dev") app.use(express.static(resolve(__dirname, "..", "..", "clien
 if (MODE === "prod") app.use(express.static(resolve(__dirname, "build")))
 
 app.use("/api", () => {})
+
+app.use("/api/auth/", authRoute)
+
 app.get("*", async (req: Request, res: Response) => {
 	try {
 		if (MODE === "dev")
