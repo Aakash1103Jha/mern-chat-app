@@ -53,7 +53,7 @@ const Auth: FC = () => {
 			return onResetPassword(e, { email, newPassword: password, cb: clearFields })
 	}
 	return (
-		<div className={`${styles.auth}`}>
+		<div className={`page`}>
 			<Form handleSubmit={(e) => handleSubmit(e)}>
 				{pathname === "/" && <h1>Login 🚀</h1>}
 				{pathname === "/register" && <h1>Register 🚀</h1>}
@@ -122,7 +122,9 @@ const Auth: FC = () => {
 					<>
 						<Button id="register_btn" label="Reset Password" />
 						<div className={`${styles.auth_cta}`}>
-							<NavLink to="/">Back to Login page</NavLink>
+							<NavLink onClick={clearFields} to="/">
+								Back to Login page
+							</NavLink>
 						</div>
 					</>
 				)}
@@ -130,7 +132,10 @@ const Auth: FC = () => {
 					<>
 						<Button id="register_btn" label="Register" />
 						<div className={`${styles.auth_cta}`}>
-							<NavLink to="/">Login</NavLink> instead?
+							<NavLink onClick={clearFields} to="/">
+								Login
+							</NavLink>{" "}
+							instead?
 						</div>
 					</>
 				)}
@@ -138,10 +143,15 @@ const Auth: FC = () => {
 					<>
 						<Button id="login_btn" label="Login" />
 						<div className={`${styles.auth_cta}`}>
-							<NavLink to="/register">Register</NavLink> now?
+							<NavLink onClick={clearFields} to="/register">
+								Register
+							</NavLink>{" "}
+							now?
 						</div>
 						<div className={`${styles.auth_cta}`}>
-							<NavLink to="/reset-password">Forgot Password?</NavLink>
+							<NavLink onClick={clearFields} to="/reset-password">
+								Forgot Password?
+							</NavLink>
 						</div>
 					</>
 				)}

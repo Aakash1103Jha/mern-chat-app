@@ -1,4 +1,5 @@
 import React, { type FC, createContext, useState } from "react"
+import { useNavigate } from "react-router"
 import CommonProps from "../interfaces/CommonProps"
 import { ILoginData, IRegisterData, IResetPasswordData } from "../interfaces/UserDataProps"
 
@@ -18,17 +19,19 @@ export const AuthContext = createContext({
 })
 
 const AuthProvider: FC<CommonProps> = (props) => {
+	const navigate = useNavigate()
 	const [isLoggedIn, setIsLoggedIn] = useState(true)
 	const [error, setError] = useState("")
 
 	const onLogin = async (e: React.FormEvent<HTMLFormElement>, LoginData: ILoginData) => {
 		e.preventDefault()
 		try {
-			const res = await fetch(`${BASE_URL}/auth/login`)
-			const data = await res.json()
-			if (res.status !== 200) return setError(data)
-			console.log(data)
+			// const res = await fetch(`${BASE_URL}/auth/login`)
+			// const data = await res.json()
+			// if (res.status !== 200) return setError(data)
+			// console.log(data)
 			setIsLoggedIn(true)
+			return navigate("/conversations")
 		} catch (err) {
 			return console.error(`Login error: ${(err as Error).message}`)
 		}

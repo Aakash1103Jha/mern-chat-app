@@ -1,0 +1,16 @@
+.message_bubble {
+	max-width: 500px;
+	width: 100%;
+	border-radius: var(--radius-sm);
+	padding: 0.7rem;
+	margin-bottom: 1rem;
+}
+.message_bubble:last-child {
+	margin-bottom: 0rem;
+}
+.message_bubble.sender {
+	background: var(--purple);
+}
+.message_bubble.receiver {
+	background: var(--pink);
+}

@@ -11,7 +11,7 @@
 	--transition: 0.3s cubic-bezier();
 	--shadow-purple: 31px 31px 3rem #373f79, -31px -31px 3rem #535fb5;
 	--shadow-pink: 31px 31px 3rem #af4c5a, -31px -31px 3rem #ff7288;
-	--shadow-white: 31px 31px 3rem #bfbfbf, -31px -31px 3rem #ffffff;
+	--shadow-white: 31px 31px 4rem #bfbfbf, -31px -31px 4rem #ffffff;
 	--shadow-black: 31px 31px 48px #141414, -31px -31px 48px #1e1e1e;
 	--shadow-gray: 31px 31px 4rem #1e1e1e, -31px -31px 4rem #2c2c2c;
 
@@ -84,4 +84,26 @@ button {
 	color: red;
 	font-weight: 300;
 	text-align: center;
+}
+.page {
+	background: var(--bg);
+	padding: 2rem 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.universal_container {
+	max-width: 450px;
+	width: 100%;
+}
+.shadow_container {
+	background: var(--bg);
+	border-radius: var(--radius-lg);
+	box-shadow: var(--shadow-white);
+}
+.form {
+	display: flex;
+	flex-direction: column;
+	padding: 2rem;
 }
