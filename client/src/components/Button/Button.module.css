@@ -1,0 +1,10 @@
+.button {
+	padding: 0.5rem;
+	margin: 1rem 0rem;
+	background: var(--pink);
+	color: var(--bg);
+}
+.button:hover,
+.button:active {
+	background: var(--pink-active);
+}

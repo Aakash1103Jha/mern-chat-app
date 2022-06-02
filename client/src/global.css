@@ -1,3 +1,23 @@
+:root {
+	--black: #191919;
+	--gray: #252525;
+	--white: #efefef;
+	--pink: #db5f71;
+	--pink-active: #d24157;
+	--purple: #454f97;
+	--radius-sm: 0.2rem;
+	--radius-md: 0.4rem;
+	--radius-lg: 0.6rem;
+	--transition: 0.3s cubic-bezier();
+	--shadow-purple: 31px 31px 3rem #373f79, -31px -31px 3rem #535fb5;
+	--shadow-pink: 31px 31px 3rem #af4c5a, -31px -31px 3rem #ff7288;
+	--shadow-white: 31px 31px 3rem #bfbfbf, -31px -31px 3rem #ffffff;
+	--shadow-black: 31px 31px 48px #141414, -31px -31px 48px #1e1e1e;
+	--shadow-gray: 31px 31px 4rem #1e1e1e, -31px -31px 4rem #2c2c2c;
+
+	--bg: var(--white);
+	--text: var(--gray);
+}
 * {
 	padding: 0;
 	margin: 0;
@@ -5,6 +25,7 @@
 	font-size: calc(0.9rem + 0.2vmin);
 	transition: 0.2s ease-in-out;
 	color: var(--text);
+	font-family: "Poppins", sans-serif;
 }
 li {
 	list-style: none;
@@ -13,10 +34,6 @@ h1,
 h2,
 h3 {
 	margin-bottom: 1rem;
-}
-h1,
-h2 {
-	font-family: "IBM Plex Serif", serif;
 }
 h1 {
 	font-size: calc(1.7rem + 0.3vmin);
@@ -41,4 +58,30 @@ body {
 }
 svg {
 	color: inherit;
+}
+body {
+	color: var(--text);
+	background: var(--bg);
+}
+input {
+	padding: 0.3rem;
+	border-radius: var(--radius-sm);
+	border: none;
+	margin: 0.5rem 0rem 1rem 0rem;
+	color: var(--gray);
+}
+input:focus,
+input:active {
+	outline: none;
+}
+button {
+	cursor: pointer;
+	border: none;
+	border-radius: var(--radius-sm);
+}
+.required,
+.error {
+	color: red;
+	font-weight: 300;
+	text-align: center;
 }
