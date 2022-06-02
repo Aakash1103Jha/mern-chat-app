@@ -14,6 +14,7 @@ const App: FC = () => {
 					element={isLoggedIn === true ? <Auth /> : <Navigate to={"/register"} />}
 				/>
 				<Route path="/register" element={<Auth />} />
+				<Route path="/reset-password" element={<Auth />} />
 			</Routes>
 		</>
 	)
